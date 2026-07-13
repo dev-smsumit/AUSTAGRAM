@@ -1,0 +1,182 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #eff6fc;
+  --color-surface: #f9fcff;
+  --color-sky: #78c0fd;
+  --color-gold: #efd48f;
+  --color-navy: #10243d;
+  --font-heading: var(--font-heading);
+  --font-sans: var(--font-body);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #eff6fc;
+  color: #28415d;
+  font-family: var(--font-body), sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.font-heading {
+  font-family: var(--font-heading), serif;
+}
+
+.section-shell {
+  position: relative;
+  padding: 5.5rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .section-shell {
+    padding: 7rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-shell {
+    padding: 8rem 2rem;
+  }
+}
+
+.glass-panel {
+  position: relative;
+}
+
+.glass-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0.08));
+  pointer-events: none;
+}
+
+.btn-primary,
+.btn-white,
+.btn-glass {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 3.5rem;
+  border-radius: 1.2rem;
+  padding: 0.95rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+
+.btn-primary:hover,
+.btn-white:hover,
+.btn-glass:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+    background: #78c0fd;
+    color: #ffffff;
+    box-shadow: 0 18px 45px rgb(120 120 120 / 25%), -1px -2px 8px #00000040 inset;
+}
+
+.btn-white {
+  background: rgba(255, 255, 255, 0.95);
+  color: #1c3552;
+  box-shadow: 0 18px 45px rgba(55, 91, 127, 0.12);
+}
+
+.btn-glass {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  backdrop-filter: blur(18px);
+}
+
+.hero-sky {
+  background:
+    radial-gradient(circle at 20% 15%, rgba(146, 188, 234, 0.72), transparent 30%),
+    radial-gradient(circle at 75% 18%, rgba(255, 225, 186, 0.72), transparent 28%),
+    linear-gradient(180deg, rgba(85, 124, 171, 0.68) 0%, rgba(126, 159, 194, 0.36) 52%, rgba(237, 245, 252, 0.14) 100%);
+}
+
+.curve-divider {
+  position: absolute;
+  inset-inline: 0px;
+  bottom: -1px;
+  height: 7rem;
+  background: rgb(239, 246, 252);
+  clip-path: polygon(100% 100%, 0% 100%, 0% 81.69%, 2% 80.53%, 4% 77.63%, 6% 74.47%, 8% 72.65%, 10% 73.10%, 12% 75.59%, 14% 78.85%, 16% 81.23%, 18% 81.52%, 20% 79.57%, 22% 76.37%, 24% 73.55%, 26% 72.54%, 28% 73.86%, 30% 76.83%, 32% 79.94%, 34% 81.62%, 36% 81.01%, 38% 78.42%, 40% 75.16%, 42% 72.90%, 44% 72.78%, 46% 74.86%, 48% 78.08%, 50% 80.82%, 52% 81.67%, 54% 80.20%, 56% 77.17%, 58% 74.11%, 60% 72.57%, 62% 73.34%, 64% 76.03%, 66% 79.27%, 68% 81.41%, 70% 81.37%, 72% 79.17%, 74% 75.92%, 76% 73.28%, 78% 72.59%, 80% 74.19%, 82% 77.29%, 84% 80.29%, 86% 81.68%, 88% 80.75%, 90% 77.97%, 92% 74.76%, 94% 72.74%, 96% 72.95%, 98% 75.27%, 100% 78.53%);
+  animation: curve-divider-wave 8s ease-in-out infinite;
+  will-change: clip-path;
+}
+
+@keyframes curve-divider-wave {
+  0%,
+  100% {
+    clip-path: polygon(100% 100%, 0% 100%, 0% 81.69%, 2% 80.53%, 4% 77.63%, 6% 74.47%, 8% 72.65%, 10% 73.10%, 12% 75.59%, 14% 78.85%, 16% 81.23%, 18% 81.52%, 20% 79.57%, 22% 76.37%, 24% 73.55%, 26% 72.54%, 28% 73.86%, 30% 76.83%, 32% 79.94%, 34% 81.62%, 36% 81.01%, 38% 78.42%, 40% 75.16%, 42% 72.90%, 44% 72.78%, 46% 74.86%, 48% 78.08%, 50% 80.82%, 52% 81.67%, 54% 80.20%, 56% 77.17%, 58% 74.11%, 60% 72.57%, 62% 73.34%, 64% 76.03%, 66% 79.27%, 68% 81.41%, 70% 81.37%, 72% 79.17%, 74% 75.92%, 76% 73.28%, 78% 72.59%, 80% 74.19%, 82% 77.29%, 84% 80.29%, 86% 81.68%, 88% 80.75%, 90% 77.97%, 92% 74.76%, 94% 72.74%, 96% 72.95%, 98% 75.27%, 100% 78.53%);
+  }
+
+  25% {
+    clip-path: polygon(100% 100%, 0% 100%, 0% 78.53%, 2% 81.69%, 4% 80.53%, 6% 77.63%, 8% 74.47%, 10% 72.65%, 12% 73.10%, 14% 75.59%, 16% 78.85%, 18% 81.23%, 20% 81.52%, 22% 79.57%, 24% 76.37%, 26% 73.55%, 28% 72.54%, 30% 73.86%, 32% 76.83%, 34% 79.94%, 36% 81.62%, 38% 81.01%, 40% 78.42%, 42% 75.16%, 44% 72.90%, 46% 72.78%, 48% 74.86%, 50% 78.08%, 52% 80.82%, 54% 81.67%, 56% 80.20%, 58% 77.17%, 60% 74.11%, 62% 72.57%, 64% 73.34%, 66% 76.03%, 68% 79.27%, 70% 81.41%, 72% 81.37%, 74% 79.17%, 76% 75.92%, 78% 73.28%, 80% 72.59%, 82% 74.19%, 84% 77.29%, 86% 80.29%, 88% 81.68%, 90% 80.75%, 92% 77.97%, 94% 74.76%, 96% 72.74%, 98% 72.95%, 100% 75.27%);
+  }
+
+  50% {
+    clip-path: polygon(100% 100%, 0% 100%, 0% 72.54%, 2% 73.86%, 4% 76.83%, 6% 79.94%, 8% 81.62%, 10% 81.01%, 12% 78.42%, 14% 75.16%, 16% 72.90%, 18% 72.78%, 20% 74.86%, 22% 78.08%, 24% 80.82%, 26% 81.67%, 28% 80.20%, 30% 77.17%, 32% 74.11%, 34% 72.57%, 36% 73.34%, 38% 76.03%, 40% 79.27%, 42% 81.41%, 44% 81.37%, 46% 79.17%, 48% 75.92%, 50% 73.28%, 52% 72.59%, 54% 74.19%, 56% 77.29%, 58% 80.29%, 60% 81.68%, 62% 80.75%, 64% 77.97%, 66% 74.76%, 68% 72.74%, 70% 72.95%, 72% 75.27%, 74% 78.53%, 76% 81.69%, 78% 80.53%, 80% 77.63%, 82% 74.47%, 84% 72.65%, 86% 73.10%, 88% 75.59%, 90% 78.85%, 92% 81.23%, 94% 81.52%, 96% 79.57%, 98% 76.37%, 100% 73.55%);
+  }
+
+  75% {
+    clip-path: polygon(100% 100%, 0% 100%, 0% 75.27%, 2% 78.53%, 4% 81.69%, 6% 80.53%, 8% 77.63%, 10% 74.47%, 12% 72.65%, 14% 73.10%, 16% 75.59%, 18% 78.85%, 20% 81.23%, 22% 81.52%, 24% 79.57%, 26% 76.37%, 28% 73.55%, 30% 72.54%, 32% 73.86%, 34% 76.83%, 36% 79.94%, 38% 81.62%, 40% 81.01%, 42% 78.42%, 44% 75.16%, 46% 72.90%, 48% 72.78%, 50% 74.86%, 52% 78.08%, 54% 80.82%, 56% 81.67%, 58% 80.20%, 60% 77.17%, 62% 74.11%, 64% 72.57%, 66% 73.34%, 68% 76.03%, 70% 79.27%, 72% 81.41%, 74% 81.37%, 76% 79.17%, 78% 75.92%, 80% 73.28%, 82% 72.59%, 84% 74.19%, 86% 77.29%, 88% 80.29%, 90% 81.68%, 92% 80.75%, 94% 77.97%, 96% 74.76%, 98% 72.74%, 100% 72.95%);
+  }
+}
+
+.curve-divider-top {
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 8rem;
+  background: #eff6fc;
+  border-bottom-left-radius: 100% 100%;
+  border-bottom-right-radius: 100% 100%;
+}
+
+.glass-icon {
+  display: inline-flex;
+  height: 3rem;
+  width: 3rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #48627d;
+  box-shadow: 0 14px 35px rgba(120, 150, 180, 0.16);
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
