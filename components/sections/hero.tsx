@@ -44,14 +44,14 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="mt-14 flex gap-4 self-start sm:flex-row sm:self-end">
+        <div className="mt-14 mb-2 w-full md:w-auto flex gap-4 self-start sm:flex-row sm:self-end">
           {heroStats.map((stat) => (
             <GlassCard
               key={stat.label}
-              className="min-w-0 w-1/3 lg:w-32 lg:min-w-32 animate-float bg-white/18 px-6 pb-8 pt-4 text-center text-white"
+              className="min-w-0 w-1/3 lg:w-32 lg:min-w-32 animate-float bg-white/18 px-2 pb-8 pt-4 text-center text-white"
             >
               <div className="text-3xl font-heading text-black">{stat.value}</div>
-              <div className="mt-1 text-sm text-black/60">{stat.label}</div>
+              <div className="mt-1 text-[12px] text-black/60">{stat.label}</div>
             </GlassCard>
           ))}
         </div>
