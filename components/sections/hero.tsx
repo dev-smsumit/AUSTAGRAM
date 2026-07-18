@@ -14,7 +14,7 @@ export function Hero() {
         className="absolute inset-0 bg-cover bg-center opacity-60"
         style={{
           backgroundImage:
-            `url(${herobnr.src})`,
+            `url(${herobnr.src})`, backgroundAttachment: "fixed",
         }}
       />
       {/* <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(238,245,252,0.32)_0%,rgba(238,245,252,0.18)_35%,rgba(238,245,252,0.72)_100%)]" /> */}

@@ -11,7 +11,7 @@ function Brand() {
       <span className="flex h-9 w-9 items-center justify-center rounded-full bg-sky-100 text-sky-500 shadow-inner">
         ≋
       </span>
-      <span className="font-heading text-[2rem] leading-none">Austagram</span>
+      <span className="font-heading text-[2rem] leading-none">A</span>
     </Link>
   );
 }

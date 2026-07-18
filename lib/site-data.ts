@@ -36,30 +36,26 @@ export const attractions = [
     title: "Austagram Haor",
     label: "Natural Wonder",
     subtitle: "The Inland Sea",
-    image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/haor1.jpg",
     className: "md:col-span-2 md:row-span-2",
   },
   {
     title: "Abdul Hamid Bridge",
     label: "Landmark",
     subtitle: "Engineering Meets Nature",
-    image:
-      "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=900&q=80",
+    image: "/images/ahbridge.jpg",
   },
   {
     title: "Haor Villages",
     label: "Cultural",
     subtitle: "Island Communities",
-    image:
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80",
+    image: "/images/haorvillage.jpg",
   },
   {
     title: "Sunrise on the Haor",
     label: "Experience",
     subtitle: "Golden Morning",
-    image:
-      "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80",
+    image: "/images/sunset1.jpg",
   },
   {
     title: "Bird Watching",
@@ -76,26 +72,22 @@ export const experiences = [
   {
     title: "Haor Boat Journey",
     description: "Navigate endless waters on a traditional wooden kosha boat.",
-    image:
-      "https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=900&q=80",
+    image: "/images/boatride.jpg",
   },
   {
     title: "Village Exploration",
     description: "Walk the raised earthen paths between floating communities.",
-    image:
-      "https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=900&q=80",
+    image: "/images/villagefromtop.jpg",
   },
   {
     title: "Haor Cuisine",
-    description: "Fresh hilsa, seasonal vegetables, and handmade pithas.",
-    image:
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
+    description: "Fresh fishes, seasonal vegetables, and handmade pithas.",
+    image: "/images/fishes.jpg",
   },
   {
     title: "Sunrise Photography",
     description: "Capture the haor as it glows gold at first light.",
-    image:
-      "https://images.unsplash.com/photo-1470770903676-69b98201ea1c?auto=format&fit=crop&w=900&q=80",
+    image: "/images/haorroad.jpg",
   },
   {
     title: "Culture & Festivals",

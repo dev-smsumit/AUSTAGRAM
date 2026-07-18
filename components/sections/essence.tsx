@@ -37,7 +37,9 @@ export function EssenceSection() {
             />
           </div>
 
-          <GlassCard className="absolute -bottom-6 left-4 max-w-[11rem] rounded-[1.5rem] bg-white/72 p-4 sm:left-6">
+          <div className="flex w-full justify-between items-center mt-5">
+
+          <GlassCard className="max-w-[11rem] rounded-[1.5rem] bg-white/72 p-4 ">
             <div className="overflow-hidden rounded-[1rem]">
               <Image
                 src="https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=600&q=80"
@@ -51,10 +53,13 @@ export function EssenceSection() {
             <div className="text-xs text-slate-500">100+ bird species</div>
           </GlassCard>
 
-          <GlassCard className="absolute -bottom-16 right-6 rounded-[1.5rem] bg-white/72 px-6 py-5 text-center">
+          <GlassCard className="rounded-[1.5rem] bg-white/72 px-6 py-5 text-center">
             <div className="font-heading text-4xl text-slate-800">24/7</div>
             <div className="mt-1 text-sm text-slate-500">Haor Beauty</div>
           </GlassCard>
+
+            </div>
+
         </div>
       </div>
     </section>

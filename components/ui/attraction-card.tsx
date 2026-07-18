@@ -25,7 +25,7 @@ export function AttractionCard({
         className,
       )}
     >
-      <div className="relative min-h-[18rem] sm:min-h-[20rem] md:h-full">
+      <div className="relative md:h-full">
         <Image
           src={image}
           alt={title}
@@ -41,7 +41,7 @@ export function AttractionCard({
           <p className="text-xs uppercase tracking-[0.3em] text-white/70">{subtitle}</p>
           <h3 className="mt-3 font-heading text-3xl leading-none sm:text-4xl">{title}</h3>
           {description ? (
-            <p className="mt-3 max-w-md text-sm leading-7 text-white/85">{description}</p>
+            <p className="mt-3 max-w-md text-sm font-light leading-5 text-white/85">{description}</p>
           ) : null}
         </div>
       </div>

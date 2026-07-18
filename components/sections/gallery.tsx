@@ -47,7 +47,7 @@ export function GallerySection() {
             <article
               key={item.title}
               className={cn(
-                "group relative overflow-hidden rounded-[1.8rem] bg-slate-200 shadow-[0_24px_60px_rgba(121,156,189,0.16)]",
+                "group relative aspect-[4/3] overflow-hidden rounded-[1.8rem] bg-slate-200 shadow-[0_24px_60px_rgba(121,156,189,0.16)] md:aspect-auto",
                 item.className ?? "md:row-span-2",
               )}
             >
